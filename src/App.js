@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import NoteContainer from "./components/NoteContainer/NoteContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
-  const notes = [
+  const [notes, setNotes] = useState([
     {
       text: "sad",
       time: "1:50pm",
@@ -35,10 +35,15 @@ function App() {
       time: "1:50pm",
       color: "orange",
     },
-  ];
+  ]);
+  const addNote = (color) => {
+    const tempNotes = [...notes];
+    tempNotes.push({ text: "", time: Date.now(), color });
+    setNotes(tempNotes);
+  };
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar addNote={addNote} />
       <NoteContainer notes={notes} />
     </div>
   );

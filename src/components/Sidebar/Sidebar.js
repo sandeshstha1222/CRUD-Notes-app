@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaCirclePlus } from "react-icons/fa6";
 import "./Sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   const color = ["#fe9b72", "#fec971", " #00d4fe", "#b693fd", "#e4ee91"];
   const [listOpen, setListOpen] = useState(false);
   return (
@@ -23,6 +23,9 @@ const Sidebar = () => {
             key={index}
             className="sidebar_list-item"
             style={{ backgroundColor: item }}
+            onClick={() => {
+              props.addNote(item);
+            }}
           />
         ))}
       </ul>
