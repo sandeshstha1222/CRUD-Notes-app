@@ -1,0 +1,20 @@
+.note {
+  width: 16em;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  background-color: brown;
+  padding: 25px;
+  border-radius: 5%;
+}
+.note_text {
+  resize: none;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: aliceblue;
+}
+.note p {
+  color: aliceblue;
+}
