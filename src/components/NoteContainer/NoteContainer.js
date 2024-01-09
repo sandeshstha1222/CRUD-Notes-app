@@ -3,13 +3,30 @@ import "./NoteContainer.css";
 import Note from "../Note/Note";
 
 const NoteContainer = (props) => {
+  const reverseArray = (arr) => {
+    const array = [];
+    for (let i = arr.length - 1; i >= 0; --i) {
+      array.push(arr[i]);
+    }
+    return array;
+  };
+  const notes = reverseArray(props.notes);
   return (
     <div className="note-container">
       <h2>Notes</h2>
       <div className="note-container_notes custom-scroll">
-        {props.notes.map((item, index) => (
-          <Note key={index} note={item} />
-        ))}
+        {notes?.length > 0 ? (
+          notes.map((item, index) => (
+            <Note
+              key={item.id}
+              note={item}
+              deleteNote={props.deleteNote}
+              updatedText={props.updatedText}
+            />
+          ))
+        ) : (
+          <p>Empty </p>
+        )}
       </div>
     </div>
   );
