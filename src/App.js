@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import NoteContainer from "./components/NoteContainer/NoteContainer";
 import Sidebar from "./components/Sidebar/Sidebar";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [notes, setNotes] = useState(
@@ -40,12 +41,17 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar addNote={addNote} />
-      <NoteContainer
-        notes={notes}
-        deleteNote={deleteNote}
-        updatedText={updatedText}
-      />
+      <div>
+        <Navbar />
+      </div>
+      <div className="App_Contain">
+        <Sidebar addNote={addNote} />
+        <NoteContainer
+          notes={notes}
+          deleteNote={deleteNote}
+          updatedText={updatedText}
+        />
+      </div>
     </div>
   );
 }

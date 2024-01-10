@@ -1,6 +1,11 @@
 .App {
   height: 100vh;
+}
+.App_Contain {
+  height: 100vh;
   display: flex;
+  gap: 2em;
+  position: fixed;
 }
 .custom-scroll::-webkit-scrollbar {
   width: 8px;

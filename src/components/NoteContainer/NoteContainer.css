@@ -1,5 +1,6 @@
 .note-container {
   height: 100%;
+  width: fit-content;
 }
 .note-container_notes {
   height: 90%;
@@ -7,5 +8,5 @@
   flex-wrap: wrap;
   gap: 2em;
   overflow-y: scroll;
-  margin: 1em;
+  margin: 2em;
 }

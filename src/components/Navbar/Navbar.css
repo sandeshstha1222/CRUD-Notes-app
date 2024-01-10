@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:ital,wght@0,100;0,300;0,400;1,200;1,300&family=Roboto+Condensed:wght@300;400;700&family=WindSong:wght@500&display=swap");
+.Navbar {
+  background-color: aliceblue;
+  height: 8em;
+}
+.Navbar_contain {
+  padding: 2em;
+  display: flex;
+}
+.Navbar p {
+  font-style: italic;
+  font-family: "WindSong", cursive;
+  font-size: 50px;
+}
+.Navbar h2 {
+  font-size: 50px;
+  font-family: "Josefin Sans", sans-serif;
+}
